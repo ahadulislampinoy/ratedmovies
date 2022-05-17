@@ -1,0 +1,134 @@
+/* All this css designed by Devzeroone */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&display=swap");
+:root {
+  --primary-color: #000;
+  --secondary-color: #e2b616;
+  --tertiary-color: #4b84cf;
+
+  --text-color: orange;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  background-color: 36px;
+  color: var(--secondary-color);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.288);
+}
+.search {
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px 10px;
+  color: var(--primary-color);
+}
+
+.search::placeholder {
+  color: rgb(90, 90, 90);
+}
+
+.search:focus {
+  outline: none;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* .main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  } */
+
+/* 
+  @media only screen and (max-width: 500px){
+    .main {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+     
+  } */
+
+.movie {
+  width: 250px;
+  margin: 18px;
+  box-shadow: 0px 5px 0px rgba(194, 194, 194, 0.4);
+  border-radius: 5px;
+
+  position: relative;
+  overflow: hidden;
+}
+.movie img {
+  width: 100%;
+  height: 350px;
+}
+.movie_info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.movie_info span {
+  background-color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.movie_info span.green {
+  color: rgb(0, 175, 0);
+}
+
+.movie_info span.orange {
+  color: orange;
+}
+
+.movie_info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 16px;
+  max-height: 100%;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(105%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+/* pagination */
+.pagination {
+  padding: 50px 0;
+  text-align: center;
+}
+.pagination button {
+  padding: 10px 20px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
